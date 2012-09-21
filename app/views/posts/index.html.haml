@@ -1,0 +1,15 @@
+Add a 
+= link_to 'new post', new_post_path
+%br
+%br
+%br
+%hr
+- @posts.each do |post|
+  %div#post-body
+    = post.body
+  %br
+  %br
+  %div#poster-details
+    = "Posted #{time_ago_in_words(post.created_at)} ago by #{post.poster}"
+  %hr
+
